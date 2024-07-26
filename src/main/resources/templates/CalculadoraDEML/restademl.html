@@ -2,8 +2,6 @@
 <html xmlns:th="http://www.thymeleaf.org">
 
 <head>
-
-<body>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -15,16 +13,21 @@
         }
 
         .calculator-container {
-            background: #c6d9f6;
+            background: linear-gradient(to bottom, #a2cbff, #858ed6);
             padding: 20px;
-            border-radius: 10px;
+            border-radius: 0px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
             width: 300px;
         }
 
-        .calculator-container h1 {
+        .container h1 {
             text-align: left;
             color: #333;
+            margin: 0 0 10px 0;
+            font-size: 18px;
+            font-weight: normal;
+            border-bottom: 1px solid #ccc;
+            padding-bottom: 5px;
         }
 
         .calculator-container label {
@@ -70,7 +73,9 @@
             text-align: center;
         }
     </style>
+</head>
 
+<body>
     <div class="calculator-container">
         <h1>Resta</h1>
         <form th:action="@{/calculadora/resta}" method="post">
@@ -85,7 +90,7 @@
 
             <div class="button-container">
                 <button type="submit">Calcular</button>
-                <button type="button" onclick="clearForm()">Limpiar</button>
+                <button type="button" onclick="clearForm">Limpiar</button>
             </div>
         </form>
     </div>
